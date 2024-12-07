@@ -1,11 +1,14 @@
 [project]
-name = "python-project-template"
+name = "advent-of-code-2024"
 version = "0.1.0"
 description = "Add your description here"
 authors = [{ name = "Rayyan Cyclegar", email = "aboominister@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "aoc-lube[utils]>=1.2.0",
+    "more-itertools>=10.5.0",
+]
 
 [dependency-groups]
 dev = [
@@ -23,13 +26,6 @@ line-length = 100
 
 [tool.ruff.lint]
 ignore = ["E203", "D100", "D103"]
-
-[tool.pyright]
-include = ["module_name/**/*.py"]
-strict = ["module_name/**/*.py"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
 
 [tool.coverage.run]
 branch = false
