@@ -9,9 +9,9 @@ def part_1(inp: str) -> int:
 
 def part_2(inp: str) -> int:
     numbers = [int(i) for i in inp.split()]
-    second_row = numbers[1::2]
+    second_col = numbers[1::2]
 
-    return sum(i * second_row.count(i) for i in numbers[::2])
+    return sum(i * second_col.count(i) for i in numbers[::2])
 
 
 if __name__ == "__main__":
