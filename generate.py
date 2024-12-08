@@ -10,8 +10,7 @@ Cookiecutter script for generating the solution structure for each day.
 import argparse
 import pathlib
 
-PYTHON_FILE_TEMPLATE = """import more_itertools
-from aoc_lube import fetch, submit
+PYTHON_FILE_TEMPLATE = """from aoc_lube import fetch, submit  # type: ignore
 
 
 def part_1() -> None:
@@ -23,7 +22,7 @@ def part_2() -> None:
 
 
 if __name__ == "__main__":
-    raw_input = fetch(2023, {day})
+    raw_input = fetch(2024, {day})
 """
 
 
